@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/my_events.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('campus_map') }}">🗺 Campus Map</a>
+        <a href="{{ url_for('my_events') }}" class="active">🎟 My Events</a>
+    </nav>
+
+    <div class="container">
+        <h2>🚀 My Events</h2>
+
+        {% for event in events %}
+        <div class="event-card">
+            <h3>{{ event.name }}</h3>
+            <p><strong>Venue:</strong> {{ event.venue }}</p>
+            <p><strong>Time:</strong> {{ event.time }}</p>
+            <p><strong>Description:</strong> {{ event.description }}</p>
+        </div>
+    
+
+        <div class="timeline">
+            <h3>⏳ Timeline</h3>
+            <ul>
+                {% for step in event.timeline %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+
+        <div class="announcements-container">
+            <h2>📢 Latest Updates</h2>
+            <ul class="announcements-list">
+                <li>📅 Hackathon 2025 is happening soon! Don't forget to register.</li>
+                <li>🎉 Welcome party for new students next week!</li>
+                <li>📢 Venue updated for the AI Workshop – now in Room 305.</li>
+            </ul>
+        </div>
+
+
+        <div class="map-container">
+            <h3>📍 Event Location</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/campus_map.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('campus_map') }}" class="active">🗺 Campus Map</a>
+        <a href="{{ url_for('my_events') }}">🎟 My Events</a>
+    </nav>
+
+    <div class="container">
+        <h2>📍 Campus Map</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+</body>
+</html>

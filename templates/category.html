@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Category</title>
+    <link rel="stylesheet" href="../static/css/category.css">
+    <script defer src="../static/js/category.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <div id="sidebar">
+        <button id="close-btn">✖</button>
+        <ul>
+            <li><a href="#">🏛 About Campus</a></li>
+            <li><a href="#">📅 Academic Calendar</a></li>
+            <li><a href="../templates/faculty.html">👨‍🏫 Faculty Section</a></li>
+        </ul>
+    </div>
+
+
+    <nav>
+        <button id="menu-btn">☰</button>
+        <input type="text" placeholder="Search clubs...">
+        <!-- <img src="profile-icon.png" alt="Profile" class="profile-icon"> -->
+    </nav>
+    <button class="back-button" onclick="history.back()">⬅ Back</button>
+
+
+    <div class="container">
+        <h2 id="category-title">Loading...</h2>
+        <div id="club-list">
+
+            <h2>Clubs in {{ category }}</h2>
+
+            <div class="grid">
+                {% for club in clubs %}
+                <div class="club-card {% if club[5] == 'Closed' %} closed {% endif %}" onclick="window.location.href='/club/{{ club[0] }}'">
+                    <img src="../static/images/{{ club[8] }}" alt="{{ club[1] }}" class="club-logo">
+                    <h3>{{ club[1] }}</h3>
+                    <p><strong>Achievements:</strong> {{ club[7] }}</p>
+                    <p><strong>Venue:</strong> {{ club[6] }}</p>
+                    <p><strong>Timings:</strong> {{ club[4] }}</p>
+                    <p><strong>Registration:</strong> {{ club[5] }}</p>
+                    <button class="register-btn" {% if club[5] == 'Closed' %}disabled{% endif %}>Register</button>
+                </div>
+                {% else %}
+                <p>No clubs found in this category.</p>
+                {% endfor %}
+            </div>
+                      
+        </div>
+    </div>
+
+</body>
+</html>

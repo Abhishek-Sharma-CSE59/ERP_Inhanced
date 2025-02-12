@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society & Club Home</title>
+    <link rel="stylesheet" href="../static/css/home_page.css">
+    <script defer src="../static/js/home_page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/chatbot.css">
+    <script defer src="../static/js/chatbot.js"></script>
+
+</head>
+<body>
+
+
+    <div id="sidebar">
+        <button id="close-btn">✖</button>
+        <ul>
+            <li><a href="{{ url_for('campus_details') }}">🏛 About Campus</a></li>
+            <li><a href="{{ url_for('academic_calendar') }}">📅 Academic Calendar</a></li>
+            <li><a href="{{ url_for('faculty_page') }}">👨‍🏫 Faculty Section</a></li>
+            <li><a href="{{ url_for('campus_map') }}">📍 Campus Map</a></li>
+            <li><a href="{{ url_for('my_events') }}">📢 My Event</a></li>
+        </ul>
+    </div>
+
+
+    <nav>
+        <button id="menu-btn">☰</button>
+        <input type="text" id="search-bar" placeholder="Search clubs...">
+
+    </nav>
+
+
+    <div class="container">
+        <h2>Explore Clubs</h2>
+        <div class="grid">
+            <div class="card" style="background-image: url('../static/images/dance_cat.jpeg');">
+                <p>Dance Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/cyber_cat.jpeg');">
+                <p>Cyber Security Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/debate_cat.jpeg');">
+                <p>Debate Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/sports_cat.jpeg');">
+                <p>Sports Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/music.jpeg');">
+                <p>Music Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/theater.jpeg');">
+                <p>Theater Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/coding.jpeg');">
+                <p>Coding Club</p>
+            </div>
+            <div class="card" style="background-image: url('../static/images/robotics.jpeg');">
+                <p>Robotics Club</p>
+            </div>
+        </div>
+    </div>
+    <div class="chatbot-container">
+        <div class="chatbot-button">💬 Chat</div>
+        <div class="chatbot-box">
+            <div class="chatbot-header">
+                AI Chatbot
+                <button id="close-chat">✖</button>
+            </div>
+            <div class="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Ask something...">
+        </div>
+    </div>
+
+    <div class="announcements-container">
+        <h2>📢 Announcements</h2>
+        <ul class="announcements-list">
+            <li>📅 New Academic Timetable Released - <span>February 2025</span></li>
+            <li>🎉 Cultural Fest Coming Soon! - <span>March 10, 2025</span></li>
+            <li>📢 Important Notice: Library Timings Updated</li>
+            <li>🏆 Sports Meet Registration Open!</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

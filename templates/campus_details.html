@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SVGOI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/campus_details.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('campus_map') }}">🗺 Campus Map</a>
+        <a href="{{ url_for('my_events') }}">🎟 My Events</a>
+        <a href="{{ url_for('academic_calendar') }}">📅 Academic Calendar</a>
+        <a href="{{ url_for('campus_details') }}" class="active">🏛 About Campus</a>
+    </nav>
+
+    <div class="container">
+        <h2>🏛 About SVGOI</h2>
+        <p>
+            Swami Vivekanand Group of Institutions (SVGOI) was founded under the 
+            Shri Raghunath Rai Memorial Educational and Charitable Trust on September 29, 2003. 
+            The journey began with the establishment of Swami Vivekanand Institute of Engineering and Technology (SVIET) in 2004.
+        </p>
+
+        <h3>🎓 Discover the Best Engineering Programs at SVGOI</h3>
+        <p>
+            Situated just 30 km from Chandigarh on the NH-1 Chandigarh-Patiala National Highway, SVGOI offers a prime location 
+            and a world-class education. The sprawling campus is strategically positioned, equidistant from Chandigarh, 
+            Mohali, Panchkula, Ambala, and Patiala.
+        </p>
+
+        <h3>🌍 Diverse and Inclusive Community</h3>
+        <p>
+            SVGOI takes pride in its culturally rich and diverse community. The campus welcomes students from across India, 
+            including Assam, Nagaland, Himachal Pradesh, Uttarakhand, Uttar Pradesh, Delhi-NCR, and Punjab. 
+            Additionally, international students from Egypt, Nepal, and beyond contribute to the vibrant student life.
+        </p>
+
+        <h3>🏆 Current Initiatives & Achievements</h3>
+        <p>
+            At SVGOI, we are dedicated to nurturing future leaders through a combination of academic rigor, cultural diversity, 
+            and state-of-the-art facilities. Our recent <strong>NAAC accreditation</strong> is a testament to our commitment 
+            to excellence in education.
+        </p>
+    </div>
+
+</body>
+</html>

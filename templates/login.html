@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Society Club</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 class="logo">College Connect</h2>
+            <h2>Login</h2>
+            <form action="/" method="POST">
+                <div class="input-group">
+                    <label for="username">Username / Admission No.</label>
+                    <input type="text" id="username" placeholder="Enter your username" name="username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" name="password">
+                </div>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <p class="{{ category }}">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <button type="submit">Login</button>
+                <div class="links">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Sign Up</a>
+                </div>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="../static/images/log_img1.png" alt="Cartoonish Student Illustration">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ club[1] }} - Club Details</title>
+    <link rel="stylesheet" href="../static/css/club.css">
+</head>
+<body>
+
+
+    <button class="back-button" onclick="history.back()">⬅ Back</button>
+
+    <div class="club-container">
+        <img src="../static/images/{{ club[8] }}" alt="{{ club[1] }}" class="club-banner">
+        <h1>{{ club[1] }}</h1>
+        <p class="club-description">{{ club[3] }}</p>
+        
+        <div class="club-info">
+            <p><strong>Venue:</strong> {{ club[6] }}</p>
+            <p><strong>Timings:</strong> {{ club[4] }}</p>
+            <p><strong>Registration Status:</strong> {{ club[5] }}</p>
+        </div>
+
+        <h2>Leader Details</h2>
+        <div class="leader-info">
+            <p><strong>Leader Name:</strong> {{ club[6] }}</p>
+            <p><strong>Contact:</strong> +91 9876543210</p>  
+        </div>
+
+        <h2>Achievements</h2>
+        <p>{{ club[7] }}</p>
+
+        <h2>Photo Gallery</h2>
+        <div class="photo-gallery">
+            <img src="../static/images/{{ club[8] }}" alt="Club Image">
+            <img src="../static/images/{{ club[8] }}" alt="Club Image">
+            <img src="../static/images/{{ club[8] }}" alt="Club Image">
+        </div>
+
+        <h2>Ratings & Reviews</h2>
+        <p>⭐⭐⭐⭐☆ (4.5/5 based on 120 reviews)</p>
+
+        
+        <h2>📝 Give Your Feedback</h2>
+        <form action="{{ url_for('submit_feedback', club_id=club[0]) }}" method="POST" class="feedback-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+</html>

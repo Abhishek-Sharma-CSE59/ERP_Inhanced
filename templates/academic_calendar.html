@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/academic_calendar.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="{{ url_for('home') }}">🏠 Home</a>
+        <a href="{{ url_for('campus_map') }}">🗺 Campus Map</a>
+        <a href="{{ url_for('my_events') }}">🎟 My Events</a>
+        <a href="{{ url_for('academic_calendar') }}" class="active">📅 Academic Calendar</a>
+    </nav>
+
+    <div class="container">
+        <h2>📅 Academic Calendar 2025</h2>
+        <div class="calendar-section">
+            <h3>💻 Computer Science Department</h3>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester 1 Begins</td>
+                        <td>January 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Mid-Semester Exams</td>
+                        <td>March 5 - March 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Project Submission Deadline</td>
+                        <td>April 15, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Final Exams</td>
+                        <td>May 1 - May 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Semester Break</td>
+                        <td>May 15 - June 15, 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="calendar-section">
+            <h3>🔧 Mechanical Engineering Department</h3>
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester 1 Begins</td>
+                        <td>January 12, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Mid-Semester Exams</td>
+                        <td>March 8 - March 15, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Workshop & Seminar</td>
+                        <td>April 10, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Final Exams</td>
+                        <td>May 5 - May 15, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Semester Break</td>
+                        <td>May 20 - June 20, 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
